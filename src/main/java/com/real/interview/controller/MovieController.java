@@ -39,6 +39,7 @@ public class MovieController {
         return new ResponseEntity<>(moviesPage, HttpStatus.OK);
     }
 
+
     @GetMapping("/{movieId}")
     public ResponseEntity<Movie> getMovieForId(@PathVariable Long movieId) {
         Movie movie = movieService.findById(movieId);
